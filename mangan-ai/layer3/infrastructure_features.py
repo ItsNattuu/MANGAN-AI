@@ -11,7 +11,7 @@ class InfrastructureFeatureEngine:
         power_lines_path,
         existing_mines_csv,
         processing_facilities_csv,
-        metric_crs="EPSG:32643",  # match whatever UTM zone Layer 2 uses
+        metric_crs="EPSG:32644",  # match whatever UTM zone Layer 2 uses
     ):
         self.metric_crs = metric_crs
 
