@@ -13,10 +13,10 @@ instead of the synthetic list.
 
 import pandas as pd
 
-from infrastructure_features import InfrastructureFeatureEngine
-from land_constraints import LandConstraintEngine
-from terrain_features import TerrainFeatureEngine
-from mining_efficiency import compute_mining_efficiency
+from .infrastructure_features import InfrastructureFeatureEngine
+from .land_constraints import LandConstraintEngine
+from .terrain_features import TerrainFeatureEngine
+from .mining_efficiency import compute_mining_efficiency
 
 OVERALL_PRIORITY_WEIGHTS = {
     "prospectivity": 0.5,
@@ -90,7 +90,7 @@ if __name__ == "__main__":
         processing_facilities_csv="data/processing_facilities.csv",
     )
     terrain_engine = TerrainFeatureEngine(dem_path="data/processed/dem.tif")
-    constraint_engine = LandConstraintEngine(protected_areas_path="data/constraints/protected_areas.geojson")
+    constraint_engine = LandConstraintEngine(protected_areas_path="data/protected_areas.geojson")
 
     ranked = rank_targets(synthetic_candidates, infra_engine, terrain_engine, constraint_engine)
     print_top_targets(ranked)
