@@ -8,7 +8,7 @@ from .manganese_identifier import identify_manganese
 
 # ---------------------------------------------------------
 
-BASE_DIR = Path(**file**).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent
 
 # ---------------------------------------------------------
 
