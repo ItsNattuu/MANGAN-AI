@@ -1,0 +1,6 @@
+mine_id,latitude,longitude,ore_type,production_tonnes
+M001,21.15,83.45,Iron Ore,85000
+M002,21.22,83.52,Manganese,62000
+M003,21.30,83.58,Iron Ore,105000
+M004,21.35,83.48,Bauxite,45000
+M005,21.18,83.62,Iron Ore,92000

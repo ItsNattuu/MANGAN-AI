@@ -1,0 +1,105 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "road_id": 1,
+                "road_type": "highway"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        83.40,
+                        21.10
+                    ],
+                    [
+                        83.45,
+                        21.15
+                    ],
+                    [
+                        83.50,
+                        21.20
+                    ],
+                    [
+                        83.55,
+                        21.25
+                    ],
+                    [
+                        83.60,
+                        21.30
+                    ],
+                    [
+                        83.65,
+                        21.35
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "road_id": 2,
+                "road_type": "secondary"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        83.40,
+                        21.30
+                    ],
+                    [
+                        83.45,
+                        21.27
+                    ],
+                    [
+                        83.50,
+                        21.24
+                    ],
+                    [
+                        83.55,
+                        21.21
+                    ],
+                    [
+                        83.60,
+                        21.18
+                    ],
+                    [
+                        83.65,
+                        21.15
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "road_id": 3,
+                "road_type": "local"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        83.48,
+                        21.10
+                    ],
+                    [
+                        83.48,
+                        21.20
+                    ],
+                    [
+                        83.48,
+                        21.30
+                    ],
+                    [
+                        83.48,
+                        21.40
+                    ]
+                ]
+            }
+        }
+    ]
+}

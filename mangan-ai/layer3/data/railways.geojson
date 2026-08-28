@@ -1,0 +1,69 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "railway_id": 1,
+                "railway_type": "main"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        83.42,
+                        21.12
+                    ],
+                    [
+                        83.47,
+                        21.16
+                    ],
+                    [
+                        83.52,
+                        21.20
+                    ],
+                    [
+                        83.57,
+                        21.24
+                    ],
+                    [
+                        83.62,
+                        21.28
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "railway_id": 2,
+                "railway_type": "branch"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        83.43,
+                        21.35
+                    ],
+                    [
+                        83.48,
+                        21.32
+                    ],
+                    [
+                        83.53,
+                        21.29
+                    ],
+                    [
+                        83.58,
+                        21.26
+                    ],
+                    [
+                        83.63,
+                        21.23
+                    ]
+                ]
+            }
+        }
+    ]
+}

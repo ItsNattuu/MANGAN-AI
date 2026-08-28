@@ -1,0 +1,75 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "area_id": "PA001",
+                "name": "Forest Reserve A",
+                "protection_level": "high"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            83.44,
+                            21.25
+                        ],
+                        [
+                            83.49,
+                            21.25
+                        ],
+                        [
+                            83.49,
+                            21.30
+                        ],
+                        [
+                            83.44,
+                            21.30
+                        ],
+                        [
+                            83.44,
+                            21.25
+                        ]
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "area_id": "PA002",
+                "name": "Wildlife Zone B",
+                "protection_level": "high"
+            },
+            "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                    [
+                        [
+                            83.56,
+                            21.32
+                        ],
+                        [
+                            83.62,
+                            21.32
+                        ],
+                        [
+                            83.62,
+                            21.37
+                        ],
+                        [
+                            83.56,
+                            21.37
+                        ],
+                        [
+                            83.56,
+                            21.32
+                        ]
+                    ]
+                ]
+            }
+        }
+    ]
+}

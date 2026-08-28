@@ -1,0 +1,69 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "power_id": 1,
+                "voltage": "220kV"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        83.41,
+                        21.18
+                    ],
+                    [
+                        83.46,
+                        21.22
+                    ],
+                    [
+                        83.51,
+                        21.26
+                    ],
+                    [
+                        83.56,
+                        21.30
+                    ],
+                    [
+                        83.61,
+                        21.34
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "power_id": 2,
+                "voltage": "132kV"
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": [
+                    [
+                        83.44,
+                        21.08
+                    ],
+                    [
+                        83.49,
+                        21.13
+                    ],
+                    [
+                        83.54,
+                        21.18
+                    ],
+                    [
+                        83.59,
+                        21.23
+                    ],
+                    [
+                        83.64,
+                        21.28
+                    ]
+                ]
+            }
+        }
+    ]
+}

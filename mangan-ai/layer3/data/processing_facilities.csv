@@ -1,0 +1,5 @@
+facility_id,latitude,longitude,facility_type,capacity_tonnes
+F001,21.20,83.55,Processing Plant,150000
+F002,21.28,83.62,Processing Plant,120000
+F003,21.12,83.50,Smelter,100000
+F004,21.34,83.60,Processing Plant,180000
