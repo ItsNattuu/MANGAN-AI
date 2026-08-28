@@ -15,9 +15,9 @@ in this file changes.
 import random
 import numpy as np
 
-from infrastructure_features import InfrastructureFeatureEngine
-from land_constraints import LandConstraintEngine
-from terrain_features import TerrainFeatureEngine  # reuse the same one Layer 2 built
+from .infrastructure_features import InfrastructureFeatureEngine
+from .land_constraints import LandConstraintEngine
+from .terrain_features import TerrainFeatureEngine  # reuse the same one Layer 2 built
 
 
 # ---------------------------------------------------------------------
