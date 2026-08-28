@@ -2,8 +2,8 @@ from pathlib import Path
 
 import pandas as pd
 
-from raw_2excel import read_raw_image
-from manganese_features import calculate_manganese_features
+from .raw_2_excel import read_raw_image
+from .manganese_features import calculate_manganese_features
 
 
 def identify_manganese(
@@ -11,33 +11,56 @@ def identify_manganese(
     output_excel: str
 ) -> dict:
     """
-    Complete manganese identification pipeline.
+    Complete Layer 1 manganese identification pipeline.
 
-    Raw image
-        ↓
+    Workflow
+    --------
+    Raw multispectral image
+            ↓
     Band extraction
-        ↓
+            ↓
     Spectral feature calculation
-        ↓
-    Manganese score
-        ↓
+            ↓
+    Prototype manganese score
+            ↓
+    Manganese classification
+            ↓
     Excel output
+
+    Parameters
+    ----------
+    image_path : str
+        Path to the multispectral raster.
+
+    output_excel : str
+        Path where the processed Excel file will be written.
+
+    Returns
+    -------
+    dict
+        Summary of the Layer 1 processing result.
     """
+
+    # -------------------------------------------------
+    # 1. Read raw satellite image
+    # -------------------------------------------------
 
     print("Reading satellite image...")
 
     df = read_raw_image(image_path)
 
-    print(
-        f"Read {len(df)} pixels."
-    )
+    print(f"Read {len(df)} pixels.")
+
+    # -------------------------------------------------
+    # 2. Calculate manganese spectral features
+    # -------------------------------------------------
 
     print("Calculating manganese features...")
 
     df = calculate_manganese_features(df)
 
     # -------------------------------------------------
-    # Save result
+    # 3. Save processed Layer 1 dataset
     # -------------------------------------------------
 
     output_path = Path(output_excel)
@@ -52,8 +75,12 @@ def identify_manganese(
         index=False
     )
 
+    print(
+        f"Layer 1 output saved to: {output_path}"
+    )
+
     # -------------------------------------------------
-    # Summary
+    # 4. Generate summary statistics
     # -------------------------------------------------
 
     high = int(
@@ -71,6 +98,10 @@ def identify_manganese(
     highest_score = float(
         df["Mn_Score"].max()
     )
+
+    # -------------------------------------------------
+    # 5. Return structured result
+    # -------------------------------------------------
 
     return {
         "status": "success",
