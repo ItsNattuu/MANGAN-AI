@@ -17,6 +17,25 @@ def run_layer3_from_layer2(
     layer2_df
 ):
 
+    required_columns = [
+        "latitude",
+        "longitude",
+        "Mn_Probability",
+        "Mn_Prospectivity",
+        "geological_favorability",
+    ]
+
+    missing = [
+        c for c in required_columns
+        if c not in layer2_df.columns
+    ]
+
+    if missing:
+        raise ValueError(
+            "Layer 2 output is missing required columns: "
+            f"{missing}"
+        )
+
     rows = []
 
     # -----------------------------------------
