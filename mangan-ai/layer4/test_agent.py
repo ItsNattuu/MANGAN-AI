@@ -1,5 +1,35 @@
 from agent.agent import analyze
+from ..gemini import generate_ai_report
 
+def analyze_with_gemini(
+    request,
+    layer1_summary,
+    layer2_results,
+    layer3_results
+):
+
+    deterministic = analyze(
+        request,
+        layer2_results,
+        layer3_results
+    )
+
+    ai_report = generate_ai_report(
+
+        user_request=request,
+
+        layer1_summary=layer1_summary,
+
+        layer2_results=layer2_results,
+
+        layer3_results=layer3_results
+    )
+
+    deterministic[
+        "ai_report"
+    ] = ai_report
+
+    return deterministic
 
 # ============================================================
 # MOCK LAYER 2 OUTPUT
