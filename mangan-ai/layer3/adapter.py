@@ -62,9 +62,7 @@ def run_layer3_from_layer2(
         TerrainFeatureEngine
     )
 
-    terrain = TerrainFeatureEngine(
-        dem_path="layer3/data/dem.tif"
-    )
+    terrain = TerrainFeatureEngine()
 
     # -----------------------------------------
     # Process every Layer 2 target
@@ -85,7 +83,9 @@ def run_layer3_from_layer2(
             constraint_engine=constraints,
 
             prospectivity_score=
-                float(row["Mn_Probability"])
+                float(row["Mn_Probability"]),
+            elevation=row.get("elevation"),
+            slope=row.get("slope")
         )
 
         # Add Layer 2 information
